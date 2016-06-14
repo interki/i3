@@ -96,7 +96,7 @@ set $workspace1 "1:  Terminal"
 set $workspace2 "2:  Firefox"
 set $workspace3 "3:  Visual Studio"
 set $workspace8 "8:  Nautilus"
-set $workspace9 "9:  Vimux"
+set $workspace9 "9: imux"
 set $workspace10 "10:  Media" #
 
 # switch to workspace9
@@ -181,7 +181,7 @@ exec_always --no-startup-id "i3-msg 'workspace 1:  Terminal; append_layout /h
 
 # Startup wkps swallows
 # -wksp 1-
-exec_always terminator --role 1.1 -e 'tmux' #vim ~/.vimrc'" #; bash' #.config/i3/config
+exec_always terminator --role 1.1 -e 'tmux -u' #vim ~/.vimrc'" #; bash' #.config/i3/config
 exec_always terminator --role 1.2 -e 'ranger; bash'
 exec_always terminator --role 1.3 -e 'htop; bash -l' #'nmtui-connect; bash -l' #nmtui #'ssh bsd@192.168.0.19' #; bash -l'
 
@@ -209,7 +209,7 @@ bindsym $mod+Mod1+Left workspace prev
 
 # Forced Floating
 for_window [title="Terminator Preferences"] floating enable
-#for_window [class="Nautilus"] floating enable
+for_window [class="Nautilus"] floating enable
 
 
 

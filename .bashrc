@@ -30,3 +30,4 @@ POWERLINE_BASH_SELECT=1
 
 shopt -s autocd
 alias tmux='tmux -u'
+shopt -s checkwinsize
