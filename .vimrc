@@ -1,7 +1,7 @@
 
 set nocompatible              " be iMproved, required
 " All system-wide defaults are set in $VIMRUNTIME/archlinux.vim (usually just
-" /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtime
+" /usr/share/vim/vimfiles/archlinux.vim) and sourced by the call to :runtimeir	
 " you can find below.  If you wish to change any of those settings, you should
 " do it in this file (/etc/vimrc), since archlinux.vim will be overwritten
 " everytime an upgrade of the vim packages is performed.  It is recommended to
@@ -31,6 +31,8 @@ Plugin 'VundleVim/Vundle.vim'
 
 Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
+Plugin 'sjl/badwolf'
+Plugin 'wsdjeg/vim-cheat'
 
 "rtp+=./usr/lib/python3.5/site-packages/powerline/bindings/vim/plugin/powerline.vim
 "Bundle 'powerline/powerline', {'rtp':/usr/lib/python3.5/site-packages/powerline/bindings/vim/}
@@ -58,7 +60,7 @@ set laststatus=2
 filetype plugin indent on
 set wildmenu
 set relativenumber
-"let g:airline_theme='jellybeans'
+let g:airline_theme='badwolf'
 syntax on
 set showcmd
 set hlsearch
@@ -70,3 +72,6 @@ set ruler
 set showtabline=2
 let g:pymcd_powerline="py3"
 let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+
+colorscheme desert
