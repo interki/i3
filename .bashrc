@@ -21,7 +21,7 @@ man() {
     man "$@"
 }
 
-alias grep='grep --color=auto' -n
+alias grep='grep -n --color=auto' 
 
 powerline-daemon -q
 POWERLINE_BASH_CONTINUATION=1
