@@ -1,0 +1,38 @@
+[global_config]
+  enabled_plugins = CustomCommandsMenu, TerminalShot, LaunchpadBugURLHandler
+  inactive_color_offset = 1.0
+[keybindings]
+[layouts]
+  [[default]]
+    [[[child1]]]
+      parent = window0
+      profile = default
+      type = Terminal
+    [[[window0]]]
+      parent = ""
+      type = Window
+[plugins]
+[profiles]
+  [[default]]
+    background_darkness = 0.54
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    font = DejaVu Sans Semi-Condensed 10
+    foreground_color = "#babdb6"
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[vim1]]
+    background_color = "#2e3436"
+    background_darkness = 0.94
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    exit_action = hold
+    font = PowerlineSymbols Medium 10
+    login_shell = True
+    scrollbar_position = hidden
+    show_titlebar = False
+  [[vim2]]
+    background_darkness = 0.0
+    background_type = transparent
+    cursor_color = "#aaaaaa"
+    use_theme_colors = True
