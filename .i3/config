@@ -125,7 +125,7 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 
 assign [class="Firefox"] $workspace2
 assign [class="Code"] $workspace3
-#assign [class="Nautilus"] $workspace8
+assign [class="Nautilus"] $workspace8
 
 # reload the configuration file
 bindsym $mod+Shift+c reload
@@ -169,7 +169,6 @@ bar {
 
 # Set Wallpaper
 exec_always --no-startup-id feh --bg-scale /home/arch/Pictures/Wallpapers/wallpaper.png
-
 # Layout.json cmd reference:   i3-save-tree --workspace N > ~/.i3/workspace_N.json
 # i3-save-tree --workspace 8':  Nautilus' > ~/.i3/workspace_8a.json
 
@@ -181,9 +180,9 @@ exec_always --no-startup-id "i3-msg 'workspace 1:  Terminal; append_layout /h
 
 # Startup wkps swallows
 # -wksp 1-
-exec_always terminator --role 1.1 -e 'tmux -u' #vim ~/.vimrc'" #; bash' #.config/i3/config
 exec_always terminator --role 1.2 -e 'ranger; bash'
 exec_always terminator --role 1.3 -e 'htop; bash -l' #'nmtui-connect; bash -l' #nmtui #'ssh bsd@192.168.0.19' #; bash -l'
+exec_always terminator --role 1.1 -e 'tmux -u' #vim ~/.vimrc'" #; bash' #.config/i3/config
 
 # -wksp 10-
 #exec_always terminator --role 10.1 -e 'w3m google.com; bash'   
@@ -199,8 +198,9 @@ bindsym $mod+Mod1+8 exec --no-startup-id ~/.i3/load_layout_8a.sh #exec --no-star
 
 # Startup General 
 #exec_always --no-startup-id visual-studio-code 
-#exec_always --no-startup-id nautilus
+exec_always --no-startup-id nautilus
 exec --no-startup-id compton
+exec_always --no-startup-id i3-msg 'workspace 9: imux; exec terminator --profile=default --command=tmux'
 
 bindsym $mod+Shift+s sticky toggle
 

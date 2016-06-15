@@ -33,9 +33,16 @@ Plugin 'vim-airline/vim-airline'
 Plugin 'vim-airline/vim-airline-themes'
 Plugin 'sjl/badwolf'
 Plugin 'wsdjeg/vim-cheat'
+Plugin 'NLKNguyen/papercolor-theme'
+Plugin 'junegunn/goyo.vim'
+Plugin 'reedes/vim-pencil'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'junegunn/limelight.vim'
 
-"rtp+=./usr/lib/python3.5/site-packages/powerline/bindings/vim/plugin/powerline.vim
-"Bundle 'powerline/powerline', {'rtp':/usr/lib/python3.5/site-packages/powerline/bindings/vim/}
+Plugin 'junegunn/vim-pseudocl'
+Plugin 'junegunn/vim-fnr'
+
+
 Bundle 'powerline/powerline', {'rtp': 'powerline/bindings/vim/'}
 
 " All of your Plugins must be added before the following line
@@ -53,8 +60,6 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-"export PYTHONPATH=/usr/lib/python3.5/site-packages
-"rtp+=/usr/lib/python3.5/site-packages/powerline/bindings/vim/plugin/powerline.vim
 
 set laststatus=2
 filetype plugin indent on
@@ -63,7 +68,7 @@ set relativenumber
 let g:airline_theme='badwolf'
 syntax on
 set showcmd
-set hlsearch
+"set hlsearch
 set ignorecase
 set smartcase
 set t_Co=256
@@ -73,5 +78,7 @@ set showtabline=2
 let g:pymcd_powerline="py3"
 let g:Powerline_symbols = 'fancy'
 set encoding=utf-8
+"set spell spelllang=en_us
+map <F5> :setlocal spell! spelllang=en_us<CR>
 
-colorscheme desert
+colorscheme desert 
